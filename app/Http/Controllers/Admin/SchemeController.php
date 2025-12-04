@@ -27,10 +27,10 @@ class SchemeController extends Controller
     {
         // Ambil semua data schemes dari database
         // Kita gunakan paginate untuk performance yang lebih baik saat data banyak
-        $scheme = Scheme::latest()->paginate(10); 
+        $schemes = Scheme::latest()->paginate(10); 
 
         // PASTIKAN PATH VIEW PLURAL: 'admin.schemes.index'
-        return view('admin.scheme.index', compact('scheme')); 
+        return view('admin.scheme.index', compact('schemes')); 
     }
 
     /**
